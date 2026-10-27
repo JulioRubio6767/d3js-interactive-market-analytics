@@ -1,0 +1,167 @@
+/* ----------------- BASE ----------------- */
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f4f6f8;
+  color: #1f2937;
+  margin-bottom: 20px;
+}
+/* ----------------- HEADER ----------------- */
+.header {
+  background: #ffffff;
+  border-bottom: 1px solid #dbe2ea;
+  padding: 20px 28px;
+  /* Layout flexible */
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+/* Título principal */
+.header h1 {
+  margin: 0px;
+  font-size: 2rem;
+}
+/* ----------------- FILTROS ----------------- */
+.filters {
+  display: flex;
+  gap: 1.5rem;
+  align-items: end;
+  flex-wrap: wrap;
+}
+/* Etiquetas de filtros */
+.filters label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  font-size: 0.9em;
+  font-weight: 600;
+  color: #374151;
+}
+/* Inputs y botones */
+.filters select,
+.filters button {
+  min-width: 180px;
+  height: 40px;
+  border: 1px solid #cfd8e3;
+  border-radius: 1em;
+  padding: 0 12px;
+  background: #fff;
+  font-size: 14px;
+}
+/* Botón interactivo */
+.filters button {
+  cursor: pointer;
+  font-weight: 700;
+}
+/* ----------------- DASHBOARD ----------------- */
+.dashboard {padding: 0.8em;}
+/* ----------------- KPI ----------------- */
+.kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1em;
+  margin-bottom: 1.2em;
+}
+/* Tarjetas KPI */
+.kpi-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 18px 18px 16px;
+  box-shadow: 0 2px 8px rgba(16, 24, 40, 0.06);
+  border: 1px solid #e5eaf0;
+}
+/* Título KPI */
+.kpi-card h3 {
+  margin: 0 0 10px;
+  font-size: 14px;
+  color: #5b6470;
+  font-weight: 700;
+}
+/* Valor KPI */
+.kpi-card p {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 800;
+  color: #111827;
+}
+/* Texto adicional */
+.kpi-card small {
+  display: block;
+  margin-top: 8px;
+  color: #6b7280;
+  font-size: 12px;
+  line-height: 1.4;
+}
+/* ----------------- LAYOUT ----------------- */
+.row {margin-bottom: 22px;}
+/* Grid de dos columnas */
+.two-cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+/* Tarjetas de gráficos */
+.chart-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 18px;
+  box-shadow: 0 2px 8px rgba(16, 24, 40, 0.06);
+  border: 1px solid #e5eaf0;
+}
+/* Título de gráfico */
+.chart-card h2 {
+  margin: 0 0 14px 0;
+  font-size: 18px;
+}
+/* SVG responsive */
+.chart-card svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+/* SVG responsive */
+.axis path,
+.axis line {stroke: #c7d0db;}
+.axis text {
+  fill: #4b5563;
+  font-size: 12px;
+}
+/* Líneas de grilla */
+.grid line {stroke: #edf1f5;}
+/* ----------------- TOOLTIP ----------------- */
+#tooltip {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+  background: #1f2937;
+  color: #ffffff;
+  padding: 10px 12px;
+  border-radius: 8px;
+  font-size: 12px;
+  line-height: 1.45;
+  box-shadow: 0 6px 18px #000;
+  max-width: 260px;
+}
+
+.note {
+  font-size: 0.9em;
+  fill: #6b7280;
+}
+/* ----------------- LEYENDA ----------------- */
+.legend text {
+  font-size: 1em;
+  fill: #374151;
+}
+/* ----------------- FOOTER ----------------- */
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+}

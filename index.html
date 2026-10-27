@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- Configuración básica del documento -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <!-- Título de la página -->
+  <title>Dashboard de alojamiento turístico</title>
+  <!-- Librería principal de visualización (D3.js) -->
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <!-- Hoja de estilos -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="header">
+    <div>
+      <!-- Título principal -->
+      <h1>Análisis del mercado de alojamiento turístico</h1>
+      <!-- Subtítulo técnico -->
+      <code>· Herramientas de Visualización ·</code>
+      <!-- Descripción del dashboard -->
+      <p>Comparativa por ciudad y barrio a partir de precio, calificación y concentración geográfica</p>
+    </div>
+    <!-- ================= FILTROS ================= -->
+    <div class="filters">
+      <!-- Filtro de ciudad (dinámico desde JS) -->
+      <label> Ciudad <select id="cityFilter"> <option value="all">Todas las ciudades</option> </select> </label>
+      <!-- Botón para resetear filtro -->
+      <button id="reset_filters">Reset</button>
+    </div>
+  </header>
+
+  <!-- ================= DASHBOARD ================= -->
+  <main class="dashboard">
+    <!-- KPI (Indicadores principales) -->
+    <section id="kpis" class="kpi-grid">
+      <div class="kpi-card" id="kpi-total-listings"></div>
+      <div class="kpi-card" id="kpi-avg-price"></div>
+      <div class="kpi-card" id="kpi-avg-rating"></div>
+      <div class="kpi-card" id="kpi-avg-capacity"></div>
+    </section>
+
+    <!-- ================= GRÁFICOS (FILA 1) ================= -->
+    <section class="row two-cols">
+      <!-- Top barrios por cantidad -->
+      <div class="chart-card">
+        <h2>Barrios con mayor oferta de alojamientos</h2>
+        <div id="bar-offer"></div>
+      </div>
+      <!-- Top barrios por precio -->
+      <div class="chart-card">
+        <h2>Barrios con mayor precio medio</h2>
+        <div id="bar-price-neighbourhood"></div>
+      </div>
+    </section>
+
+    <!-- ================= GRÁFICOS (FILA 2) ================= -->
+    <section class="row two-cols">
+    <!-- Histograma de precios -->
+    <div class="chart-card">
+      <h2>Distribución de precios</h2>
+      <div id="hist-price"></div>
+    </div>
+    <!-- Scatter precio vs rating -->
+    <div class="chart-card">
+      <h2>Relación entre precio y calificación</h2>
+      <div id="grafico-reviews"></div>
+    </div>
+  </section>
+  </main>
+  <!-- Tooltip global para interacciones -->
+  <div id="tooltip"></div>
+  <!-- Script principal -->
+  <script src="app.js"></script>
+</body>
+<!-- Footer fijo -->
+<footer>Patricio Jaramillo · Gianina Vallejo · Julio Rubio · Ricardo Garces</footer> 
+</html>
